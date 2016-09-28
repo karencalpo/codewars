@@ -15,7 +15,6 @@ function rot13(message) {
 		if(message[i].match(regexp)) {
 			var num = message[i].charCodeAt();
 			var newNum = num + 13;
-			//message[i] = String.fromCharCode(num);
 			
 			if(num >= 65 && num <= 90) {
 				if(newNum > 90) {
