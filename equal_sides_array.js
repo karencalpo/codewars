@@ -10,23 +10,16 @@ function findEvenIndex(arr) {
 	var left = 0;
 	var right = 0;
 
-	while(pivot !== arr.length){
+	while(pivot < arr.length){
 
 		left = arr.slice(i,pivot+1).reduce(function(a,b){ return a+b; });
-		right = arr.slice(pivot+1,j+1).reduce(function(a,b){ return a+b; });
-		//left = arr.slice(i,pivot+1);
-		//right = arr.slice(pivot,j+1);
-		console.log("left:", left);
-		console.log("right:", right);
+		right = arr.slice(pivot,j+1).reduce(function(a,b){ return a+b; });
 
 		if(left === right){
 			return pivot;
 		}
 
-	
 		pivot++;
-		//i++;
-		//j--;
 		left = 0;
 		right = 0;
 		
@@ -36,6 +29,6 @@ function findEvenIndex(arr) {
 }
 
 console.log(findEvenIndex(arr1));
-//console.log(findEvenIndex(arr2));
-//console.log(findEvenIndex(arr3));
-//console.log(findEvenIndex(arr4));
+console.log(findEvenIndex(arr2));
+console.log(findEvenIndex(arr3));
+console.log(findEvenIndex(arr4));
